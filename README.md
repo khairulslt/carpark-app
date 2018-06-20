@@ -3,40 +3,48 @@
 
 ### Introduction
 
-* A command-line password generator that fits those pesky website password requirements
+* Obtain number of Carpark Lots Available from any carpark in Singapore 
+* Uses API from https://api.data.gov.sg/v1/transport/carpark-availability 
 
-### How To Install
-* Download latest version of Python 3 from link below:
+
+### What You Need
+* Python 3:
 
 ```
 https://www.python.org/downloads/
 ```
-* Open your terminal (e.g Search Windows PowerShell from start menu if on Windows) and type the line below:
+* [Pip](https://pip.pypa.io/en/stable/quickstart/) if you're on a fresh Python install and need the libraries below
+* Requests (Python Module)
 
 ```
-pip install pyperclip
+pip install requests
 ```
-* Download all the files from this page as ZIP
-* Extract into a folder of your choice, e.g (C:\users\user\Desktop\EXAMPLEFOLDER)
+* Flask (Python Web App Framework)
+
+```
+pip install -U Flask
+```
 
 ### How To Run
-* Open up your terminal(Windows PowerShell)
-* cd into the directory you extracted this program into
+* Open up your terminal
+* cd into the directory you extracted/cloned this program into
 * e.g: With Terminal open, this should be how your first line looks like
 
 ```
 cd C:\users\user\Desktop\EXAMPLEFOLDER
 ```
-* Congratulations! You've reached the final step! Now all you need to do is type in the following:
+* Now all you need to do is type in the following:
 ```
-python password.py
+python Carpark.py
 ```
-* Enjoy!
+* Type in any Carpark No: and you're good to go
+* Should probably use in conjunction with https://data.gov.sg/dataset/hdb-carpark-information to find desired carpark No.
 
 
 ## Built With
 
 * Python
+* Flask
 
 
 ## Authors
@@ -44,5 +52,5 @@ python password.py
 Khaislt
 
 ## Final Notes:
-* First Python Programme made: Will work on transitioning it into a full-fledged Web App (Django/Flask? Or HTML/CSS/JS)
-* Instructions were made with non-coders in mind
+* Priority is trying to get it deployed on my remote Nginx Server
+* Need to work on transitioning it into a full-fledged Web App with Google Maps Accessibility and an easier way to find your desired Carpark No without referring to another site.
