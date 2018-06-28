@@ -13,7 +13,7 @@ def main():
 		daniel = jack['items'][0]["carpark_data"]
 		for d in daniel: 								# run loop to obtain carpark info corresponding to input form
 			if d["carpark_number"] == data:
-				return jsonify((d["carpark_info"]))
+				return render_template("echo.html", text=d["carpark_info"], data=data) # passing variables text & data to "echo.html"
 	else:
 		return render_template("index.html")
 
