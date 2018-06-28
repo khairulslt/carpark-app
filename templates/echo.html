@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Carpark App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
 </head>
 <body>
+<h1>Have No Fear! Carpark Finder is Here!</h1>
 
-	 
 	{% if text %}
-	  For Carpark No <strong><u>{{ data }}</strong></u>: <br><br>{{ text }}
+	  For Carpark Number <strong><u>{{ data }}</strong></u>: <br><br>{{ text }}
 	{% endif %}
 
+<div><input type="button" value="Back" onclick="window.history.back()"/></div> <!-- back button -->
 </body>
 </html>
