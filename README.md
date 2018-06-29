@@ -37,7 +37,8 @@ cd C:\users\user\Desktop\EXAMPLEFOLDER
 ```
 python Carpark.py
 ```
-* Type in any Carpark No: and you're good to go
+* Go to https://localhost:5000 in your browser
+* Type in your Carpark No. and you're good to go
 * Should probably use in conjunction with https://data.gov.sg/dataset/hdb-carpark-information to find desired carpark No.
 
 
