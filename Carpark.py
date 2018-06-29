@@ -19,3 +19,15 @@ def main():
 
 if __name__ == '__main__':
    app.run(debug = True)
+
+
+# @app.route('/submit')
+# def main():
+# 	return render_template("index.html")
+
+# @app.route('/submit',methods = ['POST', 'GET'])
+
+# comment out for now, plz try and finish POST request >>("https://scotch.io/bar-talk/processing-incoming-request-data-in-flask")
+
+# if __name__ == '__main__':
+#     app.run(debug = True)
