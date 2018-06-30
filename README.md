@@ -54,7 +54,7 @@ Khaislt
 
 ## Final Notes:
 * Finally integrated second API onto app, it finds your carpark number based on an address given
-* (Still in works, need to add more styling, also needs to return an error in a jinja template if address does not return successfully*
+* (Still in works, need to add more styling, also needs to return an error in a jinja template if address does not return successfully)
 * Priority is trying to get it deployed on my remote Nginx Server
 * Need to work on transitioning it into a full-fledged Web App with Google Maps Accessibility ~~and an easier way to find your desired Carpark No without referring to another site.~~
 
