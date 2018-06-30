@@ -54,4 +54,6 @@ Khaislt
 
 ## Final Notes:
 * Priority is trying to get it deployed on my remote Nginx Server
-* Need to work on transitioning it into a full-fledged Web App with Google Maps Accessibility and an easier way to find your desired Carpark No without referring to another site.
+* Need to work on transitioning it into a full-fledged Web App with Google Maps Accessibility ~~and an easier way to find your desired Carpark No without referring to another site.~~
+
+
