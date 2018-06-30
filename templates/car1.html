@@ -4,10 +4,11 @@
 	<title>Carpark App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
    <body>
-   	<h1>Have No Fear! Carpark Finder is Here!</h1>
-      <form action = "http://localhost:5000" method = "POST">
+   	<h1>carpark.py</h1>
+      <form action = "http://localhost:5000/carpark" method = "POST">
          <p>Carpark No: <input type = "text" name = "Carpark" /></p>
          <p><input type = "submit" value = "submit" /></p>
       </form>

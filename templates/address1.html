@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carpark App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<h1>carpark.py</h1>
+	
+	{% for x in text %}
+	  <p>{{ x["address"] }} : <strong> {{ x["car_park_no"] }} </strong> </p>
+	{% endfor %}
+
+
+<hr>
+      <form action = "http://localhost:5000" method = "GET">
+         <p><input type = "submit" value = "Back" /></p>
+      </form>
+
+      <form action = "http://localhost:5000/lotfinder" method = "GET">
+         <p><input type = "submit" value = "Next" /></p>
+      </form>
+
+
+</body>
+</html>

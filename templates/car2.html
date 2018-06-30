@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carpark App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<h1>carpark.py</h1>
+
+	{% if text %}
+	  For Carpark Number <strong><u>{{ data }}</strong></u>: <br><br>{{ text }}
+	{% endif %}
+
+
+<!-- can choose to use the below button to go back as well -->
+<!-- <div><input type="button" value="Back" onclick="window.history.back()"/></div> --> <!-- back button --> 
+	
+	<div>
+    	<form action = "http://localhost:5000" method = "GET">
+    		<p><input type = "submit" value = "Homepage" /></p>
+    	</form>
+	</div>
+</body>
+</html>
