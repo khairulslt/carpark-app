@@ -39,7 +39,7 @@ python Carpark.py
 ```
 * Go to https://localhost:5000 in your browser
 * Enter your respective carpark numbers / addresses
-* ~~Should probably use in conjunction with https://data.gov.sg/dataset/hdb-carpark-information to find desired carpark No. ~~
+* ~~Should probably use in conjunction with https://data.gov.sg/dataset/hdb-carpark-information to find desired carpark No.~~
 
 
 ## Built With
