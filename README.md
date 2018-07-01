@@ -38,8 +38,8 @@ cd C:\users\user\Desktop\EXAMPLEFOLDER
 python Carpark.py
 ```
 * Go to https://localhost:5000 in your browser
-* Type in your Carpark No. and you're good to go
-* Should probably use in conjunction with https://data.gov.sg/dataset/hdb-carpark-information to find desired carpark No.
+* Enter your respective carpark numbers / addresses
+* ~~Should probably use in conjunction with https://data.gov.sg/dataset/hdb-carpark-information to find desired carpark No. ~~
 
 
 ## Built With
@@ -53,5 +53,9 @@ python Carpark.py
 Khaislt
 
 ## Final Notes:
+* Finally integrated second API onto app, it finds your carpark number based on an address given
+* (Still in works, need to add more styling, also needs to return an error in a jinja template if address does not return successfully)
 * Priority is trying to get it deployed on my remote Nginx Server
-* Need to work on transitioning it into a full-fledged Web App with Google Maps Accessibility and an easier way to find your desired Carpark No without referring to another site.
+* Need to work on transitioning it into a full-fledged Web App with Google Maps Accessibility ~~and an easier way to find your desired Carpark No without referring to another site.~~
+
+
