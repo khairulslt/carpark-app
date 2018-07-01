@@ -9,17 +9,19 @@
 <body>
 <h1>carpark.py</h1>
 	
+	<h3>Copy your carpark number(in bold)</h3>
+<hr>
 	{% for x in text %}
 	  <p>{{ x["address"] }} : <strong> {{ x["car_park_no"] }} </strong> </p>
 	{% endfor %}
 
 
 <hr>
-      <form action = "http://localhost:5000" method = "GET">
+      <form action = "http://khairulslt.pythonanywhere.com/" method = "GET">
          <p><input type = "submit" value = "Back" /></p>
       </form>
 
-      <form action = "http://localhost:5000/lotfinder" method = "GET">
+      <form action = "http://khairulslt.pythonanywhere.com/lotfinder" method = "GET">
          <p><input type = "submit" value = "Next" /></p>
       </form>
 

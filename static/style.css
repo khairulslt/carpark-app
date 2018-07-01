@@ -9,9 +9,11 @@ html {
 }
 
 body {
-	padding: 10px 0px 0px 500px;
+    max-width: 500px;
+    margin: auto;
 }
 
 form {
     display: inline-block; /*keeps forms in same line*/
 }
+
