@@ -4,21 +4,20 @@ import requests
 import json
 app = Flask(__name__)
 
-# to find carpark number corresponding to address
 @app.route('/')
 def address():
 	return render_template("address.html")
 
-# to find carpark number corresponding to address
+# Find CP.No corresponding to address
 @app.route('/address',methods = ['POST', 'GET'])
 def address1():
 	if request.method == 'POST':
 		desired_CP_Address = request.form["address"]
 
 		response = requests.get("https://data.gov.sg/api/action/datastore_search?resource_id=139a3035-e624-4f56-b63f-89ae28d4ae4c&q=" + desired_CP_Address)
-		jack = response.json()
-		jack1 = jack['result']['records']
-		return render_template("address1.html", text=jack1)
+		r = response.json()
+		CP_Info = r['result']['records']
+		return render_template("address1.html", text=CP_Info)
 
 # to find lot availability corresponding to carpark number
 @app.route('/lotfinder',methods = ['POST', 'GET'])
@@ -32,7 +31,7 @@ def car2():
 	if request.method == 'POST':
 
 		# DO CODE FOR CARPARK AVAILABILITY CORRESPONDING TO CARPARK NUMBER 
-		desired_CP_Number = request.form["Carpark"] # IMPORTANT! desired_CP_Number == retrieval of form value from "index.html"
+		desired_CP_Number = request.form["Carpark"] # IMPORTANT! desired_CP_Number == retrieval of form value from "car1.html"
 
 		carparkApi = requests.get("https://api.data.gov.sg/v1/transport/carpark-availability")
 		carparkJson = carparkApi.json()
