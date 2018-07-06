@@ -10,7 +10,14 @@
 <h1>carpark.py</h1>
 
 	{% if text %}
-	  For Carpark Number <strong><u>{{ data }}</strong></u>: <br><br>{{ text }}
+	  For Carpark Number <strong><u>{{ data }}</strong></u>:
+	  {% for x in text %}
+	  <br> <!-- 2 BR Spaces for Formatting -->
+	  <br>
+	  	Total Carpark Lots: <strong>{{ x["total_lots"] }}</strong>
+	  <br>
+	  	Available Carpark Lots: <strong>{{ x["lots_available"] }}</strong>
+	  {% endfor %}
 	{% endif %}
 
 
