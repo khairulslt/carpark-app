@@ -39,8 +39,8 @@ def car2():
 
 		for x in CP_Data: 								# run loop to obtain carpark info corresponding to input form
 			if x["carpark_number"] == desired_CP_Number:
-				car1 = x["carpark_info"]
-				return render_template("car2.html", text=x["carpark_info"], data=desired_CP_Number) # passing variables text & data to "echo.html"
+				CP_lots = x["carpark_info"]
+				return render_template("car2.html", text=CP_lots, data=desired_CP_Number) # passing variables text & data to "echo.html"
 
 
 if __name__ == '__main__':
