@@ -8,7 +8,7 @@ app = Flask(__name__)
 def address():
 	return render_template("address.html")
 
-# Find CP.No corresponding to address
+# First API
 @app.route('/address',methods = ['POST', 'GET'])
 def address1():
 	if request.method == 'POST':
@@ -19,13 +19,13 @@ def address1():
 		CP_Info = r['result']['records']
 		return render_template("address1.html", text=CP_Info)
 
-# to find lot availability corresponding to carpark number
+
 @app.route('/lotfinder',methods = ['POST', 'GET'])
 def car1():
 	if request.method == 'GET':
 		return render_template("car1.html")
 
-# to find lot availability corresponding to carpark number
+# Second API
 @app.route('/carpark',methods = ['POST', 'GET'])
 def car2():
 	if request.method == 'POST':
