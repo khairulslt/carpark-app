@@ -8,7 +8,7 @@
 </head>
    <body>
    	<h1>carpark.py</h1>
-      <form action = "http://khairulslt.pythonanywhere.com/address" method = "POST">
+      <form action = "/address" method = "POST">
          <p>Enter your address: <input type = "text" name = "address" required></p>
          <br>
          <p>Note: Currently only accepts one word(e.g <strong>Clementi </strong> works but <strong>"Bukit Timah" </strong>and other CBD Areas might not work as the API does not cover them.)</p>
@@ -16,7 +16,7 @@
       </form>
 
       <div>
-        <form action = "http://khairulslt.pythonanywhere.com/lotfinder" method = "GET">
+        <form action = "/lotfinder" method = "GET">
            <p>If you already know your carpark number, <input type = "submit" value = "skip"> this step </p>
         </form>
       </div>
