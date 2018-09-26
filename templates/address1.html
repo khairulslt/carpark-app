@@ -8,15 +8,21 @@
 </head>
 <body>
 <h1>carpark.py</h1>
-	
+
+{% if text %}	
 	<h3>Copy your carpark number(in bold)</h3>
 <hr>
+
 	{% for x in text %}
 	  <p>{{ x["address"] }} : <strong> {{ x["car_park_no"] }} </strong> </p>
 	{% endfor %}
 
-
 <hr>
+
+{% else %}
+  <h3>You entered an invalid address! Go back and try again...</h3>
+
+{% endif %}
       <form action = "/" method = "GET">
          <p><input type = "submit" value = "Back"></p>
       </form>

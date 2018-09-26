@@ -11,7 +11,7 @@
       <form action = "/address" method = "POST">
          <p>Enter your address: <input type = "text" name = "address" id="address-input" required></p>
          <br>
-         <p>Note: Currently only accepts one word(e.g <strong>Clementi </strong> works but <strong>"Bukit Timah" </strong>and other CBD Areas might not work as the API does not cover them.)</p>
+         <p>Note: API Coverage is limited (e.g <strong>"Pasir Ris" </strong> works but <strong>"Orchard" </strong>and other CBD Areas might not work.)</p>
          <p><input onclick="store()" type = "submit" value = "Submit"></p>
       </form>
 
@@ -22,6 +22,7 @@
       </div>
    </body>
   <script  type="text/javascript">
+
     function store(){
       var addressInput= document.getElementById("address-input");
       localStorage.setItem("addressStorage", addressInput.value);
@@ -32,6 +33,8 @@
     window.onload = function() {
       var addressInput = document.getElementById("address-input");
       addressInput.value = localStorage.getItem("addressStorage");
+      console.log("LOADED FROM LOCALSTORAGE");
     }
+
   </script>
 </html>
