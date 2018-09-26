@@ -5,10 +5,9 @@ import json
 app = Flask(__name__)
 
 @app.route('/')
-def address():
-	return render_template("address.html")
+def indexPage():
+	return render_template("index.html")
 
-# First API
 @app.route('/address',methods = ['POST', 'GET'])
 def address1():
 	if request.method == 'POST':
@@ -44,4 +43,4 @@ def car2():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
