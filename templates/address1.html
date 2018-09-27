@@ -9,12 +9,13 @@
 <body>
 <h1>carpark.py</h1>
 
+<!-- if invalid input display bottom -->
 {% if text %}	
-	<h3>Copy your carpark number(in bold)</h3>
+	<h3>Click on your desired carpark number</h3>
 <hr>
 
 	{% for x in text %}
-	  <p>{{ x["address"] }} : <strong> {{ x["car_park_no"] }} </strong> </p>
+	  <p>{{ x["address"] }} : <strong><a href="">{{ x["car_park_no"] }}</a></strong> </p>
 	{% endfor %}
 
 <hr>
@@ -27,10 +28,21 @@
          <p><input type = "submit" value = "Back"></p>
       </form>
 
-      <form action = "/lotfinder" method = "GET">
-         <p><input type = "submit" value = "Next"></p>
-      </form>
-
-
 </body>
+
+<script>
+
+  // add query strings
+  window.onload = function() {
+    var elements = document.getElementsByTagName('a');
+      for(var i = 0, len = elements.length; i < len; i++) {
+        elements[i].onclick = function () {
+        event.preventDefault(); 
+        window.location.href = "/lotfinder" + '?address=' + this.innerHTML;
+      }, false;
+    }
+  }
+    
+</script>
+
 </html>

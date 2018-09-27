@@ -22,16 +22,16 @@
       </div>
    </body>
   <script  type="text/javascript">
+    
+  const addressInput = document.getElementById("address-input");
 
     function store(){
-      var addressInput= document.getElementById("address-input");
       localStorage.setItem("addressStorage", addressInput.value);
       console.log("STORING LOCALSTORAGE");
     }
 
     // on refresh, populate input form
     window.onload = function() {
-      var addressInput = document.getElementById("address-input");
       addressInput.value = localStorage.getItem("addressStorage");
       console.log("LOADED FROM LOCALSTORAGE");
     }
