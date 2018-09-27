@@ -15,6 +15,7 @@ def address1():
 
 		response = requests.get("https://data.gov.sg/api/action/datastore_search?resource_id=139a3035-e624-4f56-b63f-89ae28d4ae4c&q=" + desired_CP_Address)
 		r = response.json()
+
 		CP_Info = r['result']['records']
 		return render_template("address1.html", text=CP_Info)
 
@@ -35,12 +36,12 @@ def car2():
 		carparkApi = requests.get("https://api.data.gov.sg/v1/transport/carpark-availability")
 		carparkJson = carparkApi.json()
 		CP_Data = carparkJson['items'][0]["carpark_data"]
-
 		for x in CP_Data: 								# run loop to obtain carpark info corresponding to input form
 			if x["carpark_number"] == desired_CP_Number:
 				CP_lots = x["carpark_info"]
-				return render_template("car2.html", text=CP_lots, data=desired_CP_Number) # passing variables text & data to "echo.html"
-
+				timeStamp = x['update_datetime']
+				return render_template("car2.html", text=CP_lots, data=desired_CP_Number, time=timeStamp) # passing variables text & data to "echo.html"
+		return render_template("car2.html", text="", data=desired_CP_Number)
 
 if __name__ == '__main__':
     app.run()

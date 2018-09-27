@@ -8,7 +8,6 @@
 </head>
 <body>
 <h1>carpark.py</h1>
-
 	{% if text %}
 	  For Carpark Number <strong><u>{{ data }}</strong></u>:
 	  {% for x in text %}
@@ -17,7 +16,17 @@
 	  	Total Carpark Lots: <strong>{{ x["total_lots"] }}</strong>
 	  <br>
 	  	Available Carpark Lots: <strong>{{ x["lots_available"] }}</strong>
+	  <br>
+	  	Snapshot Taken At: <strong>{{ time }}</strong>
+	  <br> <!-- 2 BR Spaces for Formatting -->
+	  <br>
+	  	<a href="/lotfinder">Find another carpark.</a>
 	  {% endfor %}
+	{% elif not text %}
+	{{ text }}
+	  <img src="http://catplanet.org/wp-content/uploads/2014/06/You-make-kitty-scared.jpg" alt="Scared Kitty">
+	  <br>
+	  <h1>SERVER ERROR:</h1> Carpark <u><strong>{{ data }}</strong></u> may have been removed from the GovTech database because it no longer exists. Try <a href="/lotfinder">another nearby carpark.</a>
 	{% endif %}
 
 
