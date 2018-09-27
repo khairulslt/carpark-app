@@ -20,23 +20,17 @@
 	  	Snapshot Taken At: <strong>{{ time }}</strong>
 	  <br> <!-- 2 BR Spaces for Formatting -->
 	  <br>
-	  	<a href="/lotfinder">Find another carpark.</a>
+	  	<a href="/">Find another carpark.</a>
 	  {% endfor %}
 	{% elif not text %}
 	{{ text }}
 	  <img src="http://catplanet.org/wp-content/uploads/2014/06/You-make-kitty-scared.jpg" alt="Scared Kitty">
 	  <br>
-	  <h1>SERVER ERROR:</h1> Carpark <u><strong>{{ data }}</strong></u> may have been removed from the GovTech database because it no longer exists. Try <a href="/lotfinder">another nearby carpark.</a>
+	  <h1>SERVER ERROR:</h1> Carpark <u><strong>{{ data }}</strong></u> may have been removed from the GovTech database because it no longer exists. Try <a href="/">another nearby carpark.</a>
 	{% endif %}
 
 
 <!-- can choose to use the below button to go back as well -->
 <!-- <div><input type="button" value="Back" onclick="window.history.back()"/></div> --> <!-- back button --> 
-	
-	<div>
-    	<form action = "/" method = "GET">
-    		<p><input type = "submit" value = "Homepage"></p>
-    	</form>
-	</div>
 </body>
 </html>
