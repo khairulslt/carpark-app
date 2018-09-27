@@ -29,19 +29,17 @@ def car1():
 @app.route('/carpark',methods = ['POST', 'GET'])
 def car2():
 	if request.method == 'POST':
-
-		# DO CODE FOR CARPARK AVAILABILITY CORRESPONDING TO CARPARK NUMBER 
-		desired_CP_Number = request.form["Carpark"] # IMPORTANT! desired_CP_Number == retrieval of form value from "car1.html"
+		desired_CP_Number = request.form["Carpark"] 
 
 		carparkApi = requests.get("https://api.data.gov.sg/v1/transport/carpark-availability")
 		carparkJson = carparkApi.json()
 		CP_Data = carparkJson['items'][0]["carpark_data"]
-		for x in CP_Data: 								# run loop to obtain carpark info corresponding to input form
+		for x in CP_Data: 								
 			if x["carpark_number"] == desired_CP_Number:
 				CP_lots = x["carpark_info"]
 				timeStamp = x['update_datetime']
-				return render_template("car2.html", text=CP_lots, data=desired_CP_Number, time=timeStamp) # passing variables text & data to "echo.html"
+				return render_template("car2.html", text=CP_lots, data=desired_CP_Number, time=timeStamp) 
 		return render_template("car2.html", text="", data=desired_CP_Number)
-
+		
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

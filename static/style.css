@@ -11,9 +11,9 @@ html {
 body {
     max-width: 500px;
     margin: auto;
+    padding: 10px;
 }
 
 form {
     display: inline-block; /*keeps forms in same line*/
 }
-
