@@ -37,7 +37,8 @@ def car2():
 		for x in CP_Data: 								
 			if x["carpark_number"] == desired_CP_Number:
 				CP_lots = x["carpark_info"]
-				timeStamp = x['update_datetime']
+				raw_timeStamp = x['update_datetime']  # 2018-10-08T18:06:06 
+				timeStamp = raw_timeStamp[-8:] + '  /' + raw_timeStamp[:-9]
 				return render_template("car2.html", text=CP_lots, data=desired_CP_Number, time=timeStamp) 
 		return render_template("car2.html", text="", data=desired_CP_Number)
 		
