@@ -42,4 +42,4 @@ def car2():
 		return render_template("car2.html", text="", data=desired_CP_Number)
 		
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
