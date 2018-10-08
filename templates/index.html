@@ -10,7 +10,16 @@
    <body>
    	<h1>carpark.py</h1>
       <form action = "/address" method = "POST">
-         <p>Enter your address: <input type = "search" name = "address" id="address-input" placeholder ="address" required></p>
+         <p>Enter your address: 
+          <input
+          type = "search" 
+          name = "address" 
+          id="address-input" 
+          placeholder ="address" 
+          pattern = "^[a-zA-Z]+$" 
+          required>
+        </p> <!-- regex (prevent numeric inputs) -->
+
          <br>
          <p>Note: Beta Version - API Coverage is limited (e.g <strong>"Pasir Ris" </strong> works but <strong>"Orchard" </strong>and other CBD Areas/Private/Landed estates might not work. Postal codes and numeric inputs like <strong>"650122"</strong> are not valid inputs as well.)</p>
          <p><input onclick="store()" type = "submit" value = "Submit"></p>
