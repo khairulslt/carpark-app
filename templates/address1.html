@@ -16,7 +16,10 @@
 <hr>
 
 	{% for x in text %}
-	  <p>{{ x["address"] }} : <strong><a href="">{{ x["car_park_no"] }}</a></strong> </p>
+	  <p class="link-styles">{{ x["address"] }} </p> : <strong><form action="/carpark" method="POST">
+                                <button class="link" name="Carpark" value="{{ x["car_park_no"] }}" id="selek">{{ x["car_park_no"] }}</button>
+                            </form></strong>
+      <!-- <strong><a href="">{{ x["car_park_no"] }}</a></strong> </p> -->
 	{% endfor %}
 
 <hr>
@@ -33,16 +36,16 @@
 
 <script>
 
-  // add query strings
-  window.onload = function() {
-    var elements = document.getElementsByTagName('a');
-      for(var i = 0, len = elements.length; i < len; i++) {
-        elements[i].onclick = function () {
-        event.preventDefault(); 
-        window.location = "/lotfinder?address=" + this.innerHTML;
-      };
-    }
-  }
+  // // add query strings
+  // window.onload = function() {
+  //   var elements = document.getElementById('selek');
+  //     for(var i = 0, len = elements.length; i < len; i++) {
+  //       elements[i].onclick = function () {
+  //       event.preventDefault(); 
+  //       // window.location = "/lotfinder?address=" + this.innerHTML;
+  //     };
+  //   }
+  // }
     
 </script>
 
