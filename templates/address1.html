@@ -16,9 +16,10 @@
 <hr>
 
 	{% for x in text %}
-	  <p class="link-styles">{{ x["address"] }} </p> : <strong><form action="/carpark" method="POST">
-                                <button class="link" name="Carpark" value="{{ x["car_park_no"] }}" id="selek">{{ x["car_park_no"] }}</button>
-                            </form></strong>
+	  <div class="carpark-links">{{ x["address"] }}  : 
+      <form action="/carpark" method="POST">
+          <strong><button class="link" name="Carpark" value="{{ x["car_park_no"] }}" id="selek">{{ x["car_park_no"] }}</button></strong>
+      </form></div>
       <!-- <strong><a href="">{{ x["car_park_no"] }}</a></strong> </p> -->
 	{% endfor %}
 

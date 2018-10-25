@@ -18,20 +18,28 @@ form {
     display: inline-block; /*keeps forms in same line*/
 }
 
-.link-styles {
-	display: inline;
+.carpark-links {
+	margin: 16px;
 }
 
 .link {
-     color: inherit;
-     border: none; 
-     padding: 0;
-     font: inherit;
-     /*border is optional*/
-     border-bottom: 1px solid #444; 
-     cursor: pointer;
+  align-items: normal;
+  background-color: rgba(0,0,0,0);
+  border-style: none;
+  cursor: pointer;
+  display: inline;
+  font: inherit;
+  height: auto;
+  padding: 0;
+  perspective-origin: 0 0;
+  text-align: start;
+  text-decoration: underline;
+  transform-origin: 0 0;
+  width: auto;
+  outline: 1 solid red;
+  -moz-appearance: none;
 }
 
 .link:hover{
-         text-decoration:underline;
+	color: rgb(0, 0, 238); 
 }
