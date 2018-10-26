@@ -18,8 +18,17 @@ form {
     display: inline-block; /*keeps forms in same line*/
 }
 
+.index-form {
+	margin-bottom: 42px;
+}
+
 .carpark-links {
 	margin: 16px;
+}
+
+.cp-address {
+  border-top: 1px solid #8c8c8c;
+  border-bottom: 1px solid #8c8c8c;
 }
 
 .link {
@@ -42,4 +51,13 @@ form {
 
 .link:hover{
 	color: rgb(0, 0, 238); 
+}
+
+p.cp_items {
+	margin: 0;
+}
+
+div.cp_availability {
+	margin-top: 20px;
+	margin-bottom: 20px;
 }

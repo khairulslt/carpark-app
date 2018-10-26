@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <head>
@@ -7,37 +7,36 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
-<body>
-<h1>carpark.py</h1>
+  <body>
+    <h1>carpark.py</h1>
 
-<!-- if invalid input display bottom -->
-{% if text %}	
-	<h3>Click on your desired carpark number</h3>
-<hr>
 
-	{% for x in text %}
-	  <div class="carpark-links">{{ x["address"] }}  : 
-      <form action="/carpark" method="POST">
-          <strong><button class="link" name="Carpark" value="{{ x["car_park_no"] }}" id="selek">{{ x["car_park_no"] }}</button></strong>
-      </form></div>
-      <!-- <strong><a href="">{{ x["car_park_no"] }}</a></strong> </p> -->
-	{% endfor %}
+    {% if text %}	
+    	<h3>Click on your desired carpark number</h3>
 
-<hr>
+    <div class="cp-address">
+    	{% for x in text %}
+    	  <div class="carpark-links">{{ x["address"] }}  : 
+          <form action="/carpark" method="POST">
+              <b><button class="link" name="Carpark" value="{{ x["car_park_no"] }}" id="selek">{{ x["car_park_no"] }}</button></b>
+          </form>
+        </div>
+    	{% endfor %}
+    </div>
 
-{% else %}
-  <h3>You entered an invalid address! Go back and try again...</h3>
+    {% else %}
+      <h3>You entered an invalid address! Go back and try again...</h3>
+    {% endif %}
 
-{% endif %}
-      <form action = "/" method = "GET">
-         <p><input type = "submit" value = "Back"></p>
-      </form>
+    <form action = "/" method = "GET">
+       <p><input type = "submit" value = "Back"></p>
+    </form>
 
-</body>
+  </body>
 
 <script>
 
-  // // add query strings
+  // // add query strings(Function removed)
   // window.onload = function() {
   //   var elements = document.getElementById('selek');
   //     for(var i = 0, len = elements.length; i < len; i++) {

@@ -8,10 +8,12 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 </head>
    <body>
+
    	<h1>carpark.py</h1>
       <form action = "/address" method = "POST">
          <p>Enter your address: 
           <input
+          class = "index-form"
           type = "search" 
           name = "address" 
           id="address-input" 
@@ -20,11 +22,12 @@
           required>
         </p> <!-- regex (prevent numeric inputs) -->
 
-         <br>
-         <p>Note: Beta Version - API Coverage is limited (e.g <strong>"Pasir Ris" </strong> works but <strong>"Orchard" </strong>and other CBD Areas/Private/Landed estates might not work. Postal codes and numeric inputs like <strong>"650122"</strong> are not valid inputs as well.)</p>
+         <p>Note: Beta Version - API Coverage is limited (e.g <b>"Pasir Ris"</b> works but <b>"Orchard"</b> and other CBD Areas/Private/Landed estates might not work. Postal codes and numeric inputs like <b>"650122"</b> are not valid inputs as well.)</p>
          <p><input onclick="store()" type = "submit" value = "Submit"></p>
       </form>
+      
    </body>
+
   <script  type="text/javascript">
 
   const addressInput = document.getElementById("address-input");

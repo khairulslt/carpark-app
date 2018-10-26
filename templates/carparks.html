@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<head>
+	<title>Carpark App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+<h1>carpark.py</h1>
+
+	{% if text %}
+	  For Carpark Number <b><u>{{ data }}</b></u>:
+	  {% for x in text %}
+	  
+	<div class="cp_availability">
+	  	<p class="cp_items">Total Carpark Lots: <b>{{ x["total_lots"] }}</b></p>
+	  	<p class="cp_items">Available Carpark Lots: <b>{{ x["lots_available"] }}</b></p>
+	  	<p class="cp_items">Snapshot Taken At: <b>{{ time }}</b></p>
+	</div>
+
+	  	<a href="/">Find another carpark.</a>
+	  {% endfor %}
+
+
+	{% elif not text %}
+
+	  <img src="http://catplanet.org/wp-content/uploads/2014/06/You-make-kitty-scared.jpg" alt="Scared Kitty">
+
+	  <h1>SERVER ERROR:</h1> 
+
+	  Carpark <u><b>{{ data }}</b></u> may have been removed from the GovTech database because it no longer exists. <a href="javascript:history.back()">Go Back</a> or try <a href="/">a different carpark</a> 
+
+	{% endif %}
+
+
+</body>
+</html>
