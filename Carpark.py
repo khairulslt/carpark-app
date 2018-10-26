@@ -47,4 +47,4 @@ def carpark_availability():
 		return render_template("carparks.html", text="", data=cp_number) # else error handling
 		
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
