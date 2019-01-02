@@ -5,7 +5,7 @@
 
 * Obtain number of Carpark Lots Available from any carpark in Singapore 
 * Uses API from https://api.data.gov.sg/v1/transport/carpark-availability & https://data.gov.sg/dataset/hdb-carpark-information(e.g https://data.gov.sg/api/action/datastore_search?resource_id=139a3035-e624-4f56-b63f-89ae28d4ae4c&q=clementi)
-* Try it out at http://khairulslt.pythonanywhere.com or clone/download this repo and run locally(instructions below for latter)
+* ~~Try it out at http://khairulslt.pythonanywhere.com or~~ clone/download this repo and run locally(instructions below for latter)
 
 
 ### What You Need
